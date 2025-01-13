@@ -21,25 +21,11 @@ export default {
   },
   data() {
     return {
-      img: 'https://media.discordapp.net/attachments/1252284229677744178/1252628911284555919/MG_8493.jpg?ex=6672e915&is=66719795&hm=2524ff49a40149555ad85b6d3aee405e366d92dd1386b042f476f72189fd0781&=&format=webp&width=656&height=437'
+     
     }
   },
   methods: {
-    urlToBase64(url) {
-      return new Promise((resolve) => {
-        const image = new Image()
-        image.setAttribute('crossOrigin', 'Anonymous')
-        image.onload = function() {
-          const canvas = document.createElement('canvas')
-          canvas.width = image.width
-          canvas.height = image.height
-          canvas.getContext('2d').drawImage(image, 0, 0)
-          const result = canvas.toDataURL('image/png')
-          resolve(result)
-        }
-        image.src = url
-      })
-    },
+
 
     base64DataURLToArrayBuffer(dataURL) {
       const base64Regex = /^data:image\/(png|jpg|svg|svg\+xml);base64,/
